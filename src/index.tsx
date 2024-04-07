@@ -7,12 +7,30 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { BrowserRouter } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import "./asset/font/PokemonGSK2/stylesheet.css";
+
+const GlobalStyles = createGlobalStyle`
+  ${reset}
+  * {
+    letter-spacing: -0.025em;
+  }
+  html,body {
+    font-family: "PokemonGSK2";
+  }
+  a {
+    text-decoration: none;
+    color:inherit;
+  }
+`;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <GlobalStyles/>
     <Provider store={store}>
       <BrowserRouter>
         <App />
