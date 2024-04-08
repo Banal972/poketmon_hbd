@@ -5,6 +5,7 @@ export const HeaderComponent = styled.header`
     align-items: center;
     position: relative;
     height: 45px;
+    flex: none;
     button {
         all: unset;
         left: 2.5%;

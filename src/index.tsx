@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
 import { BrowserRouter } from 'react-router-dom';
 import "./asset/font/PokemonGSK2/stylesheet.css";
 import { GlobalStyles } from './utils/GlobalStyles';
+import 'swiper/css';
+import { Provider } from "react-redux";
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,7 +21,7 @@ root.render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
+    </Provider >
   </React.StrictMode>
 );
 

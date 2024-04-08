@@ -3,21 +3,16 @@ import { HeaderComponent } from "./style";
 import { useNavigate } from "react-router-dom";
 
 export interface HeaderProps {
-  prev? : boolean
+  prev? : boolean,
+  onClick? : React.MouseEventHandler<HTMLButtonElement>
 }
 
-function Header({prev} : HeaderProps) {
-
-  const navigate = useNavigate();
-
-  const prevHanlder = ()=>{
-    navigate(-1);
-  }
-
+function Header({prev,onClick} : HeaderProps) {
+  
   return (
     <HeaderComponent>
       {
-        prev && <button onClick={prevHanlder}><IoChevronBack/></button>
+        prev && <button onClick={onClick}><IoChevronBack/></button>
       }
       <h4>HBD Pokemon</h4>
     </HeaderComponent>

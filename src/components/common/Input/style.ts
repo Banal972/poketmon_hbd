@@ -5,7 +5,7 @@ export interface InputStyleProps {
     textColor? : string
 }
 
-export const InputComponent = styled.input<InputStyleProps>`
+export const Input = styled.input<InputStyleProps>`
     all: unset;
     width: 100%;
     min-width: 0;

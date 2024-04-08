@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Input from ".";
+import { Input } from "./style";
 
 const meta : Meta<typeof Input> = {
-    title : "레이아웃/인풋",
+    title : "레이아웃/Input",
     component : Input,
     tags : ["autodocs"],
     args : {

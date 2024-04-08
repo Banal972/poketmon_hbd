@@ -9,6 +9,7 @@ export const FooterComponent = styled.footer`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: none;
     p {
         font-family: "Pretendard";
         font-size: 14px;
