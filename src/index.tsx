@@ -7,12 +7,15 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { BrowserRouter } from 'react-router-dom';
+import "./asset/font/PokemonGSK2/stylesheet.css";
+import { GlobalStyles } from './utils/GlobalStyles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <GlobalStyles/>
     <Provider store={store}>
       <BrowserRouter>
         <App />
