@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
-export const BtnComponent = styled.button`
+export interface ButtonLayoutProps {
+	backgroundColor? : string;
+    textColor? : string
+}
+
+export const BtnComponent = styled.button<ButtonLayoutProps>`
     all: unset;
-    background: #1BDC7F;
-    color: #fff;
+    background: ${({backgroundColor})=>(backgroundColor ? backgroundColor : "#1BDC7F")};
+    color: ${({textColor})=>(textColor ? textColor : "#fff")};
     font-size: 24px;
     width: 100%;
     height: ${45/24*1}em;

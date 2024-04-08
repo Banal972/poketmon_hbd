@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
-import Header from "../Header/Header"
+import Header from "../Header"
 import {BackGround, LayoutComponent} from "./Layout.style";
-import Footer from "../Footer/Footer";
-import CricleBtn from "../Btn/CircleBtn/CricleBtn";
-import Btn from "../Btn/Btn/Btn";
-import Input from "../Input/Input";
-import Select from "../Select/Select";
+import Footer from "../Footer";
+import Input from "../Input";
+import Select from "../Select";
+import CricleBtn from "../Btn/CircleBtn";
+import Btn from "../Btn/Btn";
 
 function Layout() {
   return (
@@ -13,9 +13,18 @@ function Layout() {
       <LayoutComponent>
         <Header/>
           <Input/>
-          <Select/>
-          <CricleBtn>난 무슨 포켓몬일까?</CricleBtn>
-          <Btn>다음으로</Btn>
+          <Select>
+            <option value="">월을 선택해주세요.</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+            <option value="">1월</option>
+          </Select>
+          <CricleBtn label="테스트"/>
+          <Btn label="테스트"/>
           <Outlet/>
         <Footer/>
       </LayoutComponent>
