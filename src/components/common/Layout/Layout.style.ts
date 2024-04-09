@@ -13,5 +13,5 @@ export const LayoutComponent = styled.div`
 `;
 
 export const BackGround = styled.div`
-    background: #000;
+    background: #1c975c;
 `;

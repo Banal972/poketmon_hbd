@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { Input } from "../../components/common/Input/style"
 import { useAppDispatch } from "../../store/store"
-import { onChange } from "../../store/feature/pokemon/pokeSlice"
+import { getPokemon } from "../../store/feature/pokemon/pokeSlice"
 
 function Search() {
 
@@ -49,8 +49,16 @@ function Search() {
   }
 
   const onSubmit = (data : any)=>{
+    if(!slideRef.current) return;
     if(dayInput === "") return alert('일을 선택해주세요.');
-    dispatch(onChange(data));
+    const getDay = data.month+data.day;
+    if(Number(getDay) > 1025){
+      slideRef.current.swiper.slideTo(1);
+      setStep(1);
+      return alert('지금은 10월25일까지만 지원합니다.');
+    }
+
+    dispatch(getPokemon(data));
     navigate('/complate');
   }
 
@@ -92,7 +100,7 @@ function Search() {
                 >
                   <option value="">월을 선택해주세요.</option>
                   {
-                    Array.from({length : 12},(_,index)=>12-index).map((e,i)=><option key={i} value={e}>{`${e}월`}</option>)
+                    Array.from({length : 12},(_,index)=>index+1).map((e,i)=><option key={i} value={e}>{`${e}월`}</option>)
                   }
                 </Select>
                 <Btn 
@@ -109,7 +117,7 @@ function Search() {
                 >
                   <option value="">일을 선택해주세요.</option>
                   {
-                    Array.from({length : 31},(_,index)=>31-index).map((e,i)=><option key={i} value={e}>{`${e}일`}</option>)
+                    Array.from({length : 31},(_,index)=>index+1).map((e,i)=><option key={i} value={e}>{`${e}일`}</option>)
                   }
                 </Select>
                 <Btn 

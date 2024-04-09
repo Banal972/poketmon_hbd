@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
 import pokeSlice from './feature/pokemon/pokeSlice'
+import todaySlice from './feature/today/todaySlice'
 
 export const store = configureStore({
   reducer: {
-    pokeSlice
+    pokeSlice,
+    todaySlice
   },
 })
 
