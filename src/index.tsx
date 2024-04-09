@@ -10,6 +10,10 @@ import { GlobalStyles } from './utils/GlobalStyles';
 import 'swiper/css';
 import { Provider } from "react-redux";
 import { store } from './store/store';
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap';
+
+gsap.registerPlugin(useGSAP);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

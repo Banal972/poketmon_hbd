@@ -9,7 +9,7 @@ export const SearchLayout = styled.main`
 export const Box = styled.div`
     text-align: center;
     h4 {
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 10px;
     }
     dl {
@@ -19,12 +19,13 @@ export const Box = styled.div`
             margin-top: 10px;
         }
         dd {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 1em;
         }
     }
 
     input,select {
+        text-align: left;
         margin-top: 48px;
     }
 

@@ -5,11 +5,30 @@ import Header from "../../components/common/Header";
 import { useAppSelector } from "../../store/store"
 import { Box, CompleteLayout, FullHeight, LoadingLayout } from "./style";
 import { MoonLoader } from "react-spinners";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function Complete() {
 
   const pokemon = useAppSelector(state=>state.pokeSlice);
   const navigate = useNavigate();
+
+  const pokemonRef = useRef(null);
+
+  useGSAP(()=>{
+
+    if(!pokemonRef.current) return;
+
+    gsap.to(pokemonRef.current, {
+      y : -10,
+      yoyo:true,
+      repeat:-1, 
+      duration : 0.8,
+      ease : "bounce.in"
+    }); 
+
+  },[pokemonRef])
 
   return (
     <CompleteLayout>
@@ -39,7 +58,9 @@ function Complete() {
               :
               <>
                 <h4><span>{pokemon.data?.user_name}</span>님은</h4>
-                <img src={pokemon.data?.pokemon.sprites.front_default} alt={pokemon.data?.pokemon.korean_name} />
+                <div ref={pokemonRef}>
+                  <img src={pokemon.data?.pokemon.sprites.front_default} alt={pokemon.data?.pokemon.korean_name} />
+                </div>
                 <dl>
                   <dt>{pokemon.data?.pokemon.korean_name}</dt>
                   <dd>입니다</dd>

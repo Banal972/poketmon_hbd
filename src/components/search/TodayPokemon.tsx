@@ -1,7 +1,9 @@
 import moment from "moment";
 import { useAppDispatch, useAppSelector } from "../../store/store";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { getToday } from "../../store/feature/today/todaySlice";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function TodayPokemon(){
 
@@ -15,12 +17,30 @@ function TodayPokemon(){
       dispatch(getToday(today));
     }
 
-  },[today]);
+  },[today,dispatch]);
+
+  const pokemonRef = useRef(null);
+
+  useGSAP(()=>{
+
+    if(!pokemonRef.current) return;
+
+    gsap.to(pokemonRef.current, {
+      y : -10,
+      yoyo:true,
+      repeat:-1, 
+      duration : 0.8,
+      ease : "bounce.in"
+    }); 
+
+  },[pokemonRef])
 
   return (
     <>
       <h4>오늘의 포켓몬은?</h4>
-      <img src={todayPokemon.pokemon?.sprites.front_default} alt={todayPokemon.pokemon?.korean_name} />
+      <div ref={pokemonRef}>
+        <img src={todayPokemon.pokemon?.sprites.front_default} alt={todayPokemon.pokemon?.korean_name} />
+      </div>
       <dl>
         <dt>
           {todayPokemon.pokemon?.korean_name}
