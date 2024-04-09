@@ -3,7 +3,7 @@ import Btn from ".";
 import { fn } from "@storybook/test";
 
 const meta : Meta<typeof Btn> = {
-    title : "레이아웃/버튼/기본버튼",
+    title : "레이아웃/버튼/Btn",
     component : Btn,
     tags : ['autodocs'],
     args: { label : "Button",onClick: fn() },

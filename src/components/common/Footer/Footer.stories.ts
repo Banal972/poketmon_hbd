@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Footer from ".";
 
 const meta : Meta<typeof Footer> = {
-    title : "레이아웃/푸터",
+    title : "레이아웃/Footer",
     component : Footer,
 }
 

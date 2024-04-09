@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { GlobalStyles } from "../../../utils/GlobalStyles";
 
 const meta : Meta<typeof Header> = {
-    title : "레이아웃/헤더",
+    title : "레이아웃/Header",
     component : Header,
     tags : ['autodocs'],
     decorators : [

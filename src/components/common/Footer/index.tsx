@@ -6,10 +6,17 @@ function Footer() {
   return (
     <FooterComponent>
       <div>
-        <LinkBtn color="#FF5A4A" href="https://banal7.tistory.com/">
+        <LinkBtn 
+          color="#FF5A4A" 
+          href="https://banal7.tistory.com/"
+          target="_blank"
+        >
           <SiTistory style={{width : 10, color : "#fff"}}/>
         </LinkBtn>
-        <LinkBtn color="" href="https://github.com/Banal972"><IoLogoGithub/></LinkBtn>
+        <LinkBtn 
+          href="https://github.com/Banal972"
+          target="_blank"
+        ><IoLogoGithub/></LinkBtn>
       </div>
       <p>Copyright 2024. HBDPokemon. All Right Reserved.</p>
     </FooterComponent>
