@@ -1,2 +1,13 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css');
-@import url("./asset/font/PokemonGSK2/stylesheet.css");
+
+@font-face {
+    font-family: 'PokemonGSK2';
+    src: url('./asset/font/PokemonGSK2/PokemonGSK2.eot');
+    src: url('./asset/font/PokemonGSK2/PokemonGSK2.eot?#iefix') format('embedded-opentype'),
+        url('./asset/font/PokemonGSK2/PokemonGSK2.woff2') format('woff2'),
+        url('./asset/font/PokemonGSK2/PokemonGSK2.woff') format('woff'),
+        url('./asset/font/PokemonGSK2/PokemonGSK2.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

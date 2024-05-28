@@ -12,6 +12,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './utils/Theme';
+import "./index.css";
 
 gsap.registerPlugin(useGSAP);
 

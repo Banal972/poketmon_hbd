@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'PokemonGSK2';
-    src: url('PokemonGSK2.woff2') format('woff2'),
-        url('PokemonGSK2.woff') format('woff');
+    src: url('PokemonGSK2.eot');
+    src: url('PokemonGSK2.eot?#iefix') format('embedded-opentype'),
+        url('PokemonGSK2.woff2') format('woff2'),
+        url('PokemonGSK2.woff') format('woff'),
+        url('PokemonGSK2.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
