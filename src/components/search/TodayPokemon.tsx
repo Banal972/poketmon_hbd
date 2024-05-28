@@ -1,7 +1,7 @@
 import moment from "moment";
-import { useAppDispatch, useAppSelector } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "@store/store";
 import { useEffect, useRef } from "react";
-import { getToday } from "../../store/feature/today/todaySlice";
+import { getToday } from "@store/feature/today/todaySlice";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import * as S from "./TodayPokemon.style";
@@ -11,6 +11,7 @@ function TodayPokemon(){
   const dispatch = useAppDispatch();
   const today = moment().format("MDD");
   const todayPokemon = useAppSelector(state=>state.todaySlice);
+  const pokemonRef = useRef(null);
 
   useEffect(()=>{
 
@@ -19,8 +20,6 @@ function TodayPokemon(){
     }
 
   },[today,dispatch]);
-
-  const pokemonRef = useRef(null);
 
   useGSAP(()=>{
 

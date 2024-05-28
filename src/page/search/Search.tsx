@@ -33,6 +33,7 @@ function Search() {
     setStep(step-1);
     slideRef.current.swiper.slidePrev();
   }
+  
   const nextHandler = ()=>{
     if(!slideRef.current) return;
     const {swiper} = slideRef.current;
