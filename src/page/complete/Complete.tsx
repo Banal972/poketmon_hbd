@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import CricleBtn from "../../components/common/Btn/CircleBtn";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header";
-import { useAppSelector } from "../../store/store"
 import { Box, CompleteLayout, FullHeight, LoadingLayout } from "./style";
 import { MoonLoader } from "react-spinners";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Header from "@components/common/Header";
+import Footer from "@components/common/Footer";
+import CricleBtn from "@components/common/Btn/CircleBtn";
+import { useAppSelector } from "@store/store";
 
 function Complete() {
 
