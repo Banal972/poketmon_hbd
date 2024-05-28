@@ -1,11 +1,14 @@
-import { BtnComponent, ButtonLayoutProps } from "./style";
+import { BtnProps } from "./Btn.stories";
+import { BtnComponent } from "./style";
 
-interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement>,ButtonLayoutProps {
-  label : string,
-  onClick? : React.MouseEventHandler<HTMLButtonElement>
-}
 
-function Btn({type,onClick,label,backgroundColor,textColor} : BtnProps) {
+function Btn(
+  {
+    type,onClick,label,backgroundColor,textColor
+  } 
+  : 
+  BtnProps
+) {
   return (
     <BtnComponent
       type={type}

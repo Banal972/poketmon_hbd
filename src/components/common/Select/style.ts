@@ -20,7 +20,7 @@ export const SelectComponent = styled.select<SelectStyleProps>`
     all: unset;
     width: 100%;
     min-width: 0;
-    background: ${({backgroundColor})=>(backgroundColor ? backgroundColor : "#73D6A6")};
+    background: ${({theme})=>theme.colors.primary};
     color: ${({textColor})=>(textColor ? textColor : "#fff")};
     height: 40px;
     display: flex;
@@ -28,7 +28,7 @@ export const SelectComponent = styled.select<SelectStyleProps>`
     padding: 0 15px;
     box-sizing: border-box;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: "Pretendard";
     font-weight: 500;
     cursor: pointer;

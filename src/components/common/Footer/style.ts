@@ -3,22 +3,23 @@ import styled from "styled-components";
 export const FooterComponent = styled.footer`
     bottom: 0;
     width: 100%;
-    height: 80px;
-    background: #73D6A6;
+    height: 100px;
+    background: ${({theme})=>theme.colors.primary};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: none;
+    gap: 15px;
     p {
         font-family: "Pretendard";
-        font-size: 14px;
-        margin-top: 0.5em;
+        font-size: 12px;
         font-weight: 500;
         color: #fff;
     }
     div {
-        display: flex; gap: 5px;
+        display: flex; 
+        gap: 10px;
     }
 `;
 

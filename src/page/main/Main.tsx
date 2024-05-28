@@ -1,12 +1,13 @@
-import Footer from "../../components/common/Footer"
-import Header from "../../components/common/Header"
-import { Box, FullHeight, MainLayout } from "./style"
-import Pokeball from "../../asset/image/pokeball/pokeball.jpg";
-import CricleBtn from "../../components/common/Btn/CircleBtn";
+
+import * as S from "./style";
+import Pokeball from "@asset/image/pokeball/pokeball.jpg";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import Header from "@components/common/Header";
+import Footer from "@components/common/Footer";
+import CricleBtn from "@components/common/Btn/CircleBtn";
 
 function Main() {
 
@@ -29,23 +30,21 @@ function Main() {
   },[pokeballRef])
 
   return (
-    <MainLayout>
+    <S.MainLayout>
       <Header/>
-        <FullHeight>
-        
-          <Box>
-            <div ref={pokeballRef}>
+        <S.FullHeight>
+          <S.Box>
+            <S.Ball ref={pokeballRef}>
               <img src={Pokeball} alt="몬스터볼" />
-            </div>
+            </S.Ball>
             <CricleBtn
               onClick={()=>navigate('/search')}
               label="난 무슨 포켓몬일까?"
             />
-          </Box>
-
-        </FullHeight>
+          </S.Box>
+        </S.FullHeight>
       <Footer/>
-    </MainLayout>
+    </S.MainLayout>
   )
 }
 

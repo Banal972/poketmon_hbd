@@ -17,4 +17,13 @@ export const Box = styled.div`
     text-align: center;
     box-sizing: border-box;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+`;
+
+export const Ball = styled.div`
+    img {
+        width: 100px;
+    }
 `;

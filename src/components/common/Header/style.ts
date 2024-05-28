@@ -19,7 +19,7 @@ export const HeaderComponent = styled.header`
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
     }
 `;

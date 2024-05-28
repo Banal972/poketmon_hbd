@@ -1,17 +1,17 @@
 import { useRef, useState } from "react"
-import Btn from "../../components/common/Btn/Btn"
-import Footer from "../../components/common/Footer"
-import Header from "../../components/common/Header"
-import Select from "../../components/common/Select"
-import TodayPokemon from "../../components/search/TodayPokemon"
+import Btn from "@components/common/Btn/Btn"
+import Footer from "@components/common/Footer"
+import Header from "@components/common/Header"
+import Select from "@components/common/Select"
+import TodayPokemon from "@components/search/TodayPokemon"
 import { FullHeight } from "../main/style"
-import { Box, SearchLayout } from "./style"
+import * as S from "./style"
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { Input } from "../../components/common/Input/style"
-import { useAppDispatch } from "../../store/store"
-import { getPokemon } from "../../store/feature/pokemon/pokeSlice"
+import { Input } from "@components/common/Input/style"
+import { useAppDispatch } from "@store/store"
+import { getPokemon } from "@store/feature/pokemon/pokeSlice"
 
 function Search() {
 
@@ -33,6 +33,7 @@ function Search() {
     setStep(step-1);
     slideRef.current.swiper.slidePrev();
   }
+  
   const nextHandler = ()=>{
     if(!slideRef.current) return;
     const {swiper} = slideRef.current;
@@ -57,22 +58,22 @@ function Search() {
       setStep(1);
       return alert('지금은 10월25일까지만 지원합니다.');
     }
-
     dispatch(getPokemon(data));
     navigate('/complate');
   }
 
   return (
-    <SearchLayout>
+    <S.SearchLayout>
       <Header 
         prev={true}
         onClick={prevHandler}
       />
       <FullHeight>
-        <Box>
+        <S.Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Swiper
               ref={slideRef}
+              touchRatio={0}
             >
               <SwiperSlide>
                 <TodayPokemon/>
@@ -127,10 +128,10 @@ function Search() {
               </SwiperSlide>
             </Swiper>
           </form>
-        </Box>
+        </S.Box>
       </FullHeight>
       <Footer/>
-    </SearchLayout>
+    </S.SearchLayout>
   )
 }
 

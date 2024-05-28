@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom"
-import {BackGround, LayoutComponent} from "./Layout.style";
+import * as S from "./Layout.style";
 
 function Layout() {
   return (
-    <BackGround>
-      <LayoutComponent>
-        <Outlet/>
-      </LayoutComponent>
-    </BackGround>
+    <S.LayoutComponent>
+      <Outlet/>
+    </S.LayoutComponent>
   )
 }
 
