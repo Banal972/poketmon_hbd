@@ -1,12 +1,13 @@
-import Footer from "../../components/common/Footer"
-import Header from "../../components/common/Header"
+
 import * as S from "./style";
-import Pokeball from "../../asset/image/pokeball/pokeball.jpg";
-import CricleBtn from "../../components/common/Btn/CircleBtn";
+import Pokeball from "@/asset/image/pokeball/pokeball.jpg";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import Header from "@components/common/Header";
+import Footer from "@components/common/Footer";
+import CricleBtn from "@components/common/Btn/CircleBtn";
 
 function Main() {
 

@@ -1,17 +1,17 @@
 import { useRef, useState } from "react"
-import Btn from "../../components/common/Btn/Btn"
-import Footer from "../../components/common/Footer"
-import Header from "../../components/common/Header"
-import Select from "../../components/common/Select"
-import TodayPokemon from "../../components/search/TodayPokemon"
+import Btn from "@components/common/Btn/Btn"
+import Footer from "@components/common/Footer"
+import Header from "@components/common/Header"
+import Select from "@components/common/Select"
+import TodayPokemon from "@components/search/TodayPokemon"
 import { FullHeight } from "../main/style"
 import * as S from "./style"
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { Input } from "../../components/common/Input/style"
-import { useAppDispatch } from "../../store/store"
-import { getPokemon } from "../../store/feature/pokemon/pokeSlice"
+import { Input } from "@components/common/Input/style"
+import { useAppDispatch } from "@store/store"
+import { getPokemon } from "@store/feature/pokemon/pokeSlice"
 
 function Search() {
 
