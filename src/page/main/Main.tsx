@@ -1,6 +1,6 @@
 
 import * as S from "./style";
-import Pokeball from "@/asset/image/pokeball/pokeball.jpg";
+import Pokeball from "@asset/image/pokeball/pokeball.jpg";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
