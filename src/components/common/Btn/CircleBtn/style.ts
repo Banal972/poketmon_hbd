@@ -3,11 +3,11 @@ import { ButtonLayoutProps } from "../Btn/style";
 
 export const BtnComponent = styled.button<ButtonLayoutProps>`
     all: unset;
-    background: ${({backgroundColor})=>(backgroundColor ? backgroundColor : "#1BDC7F")};
+    background: ${({theme})=>theme.colors.primary};
     color: ${({textColor})=>(textColor ? textColor : "#fff")};
-    font-size: 24px;
-    width: ${200/24*1}em;
-    height: ${45/24*1}em;
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

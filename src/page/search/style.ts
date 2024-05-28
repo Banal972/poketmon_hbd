@@ -8,22 +8,6 @@ export const SearchLayout = styled.main`
 
 export const Box = styled.div`
     text-align: center;
-    h4 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    dl {
-        font-size: 28px;
-        dt {
-            font-size: 1em;
-            margin-top: 10px;
-        }
-        dd {
-            font-size: 18px;
-            margin-top: 1em;
-        }
-    }
-
     input,select {
         text-align: left;
         margin-top: 48px;

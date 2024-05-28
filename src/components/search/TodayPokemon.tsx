@@ -1,15 +1,17 @@
 import moment from "moment";
-import { useAppDispatch, useAppSelector } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "@store/store";
 import { useEffect, useRef } from "react";
-import { getToday } from "../../store/feature/today/todaySlice";
+import { getToday } from "@store/feature/today/todaySlice";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import * as S from "./TodayPokemon.style";
 
 function TodayPokemon(){
 
   const dispatch = useAppDispatch();
   const today = moment().format("MDD");
   const todayPokemon = useAppSelector(state=>state.todaySlice);
+  const pokemonRef = useRef(null);
 
   useEffect(()=>{
 
@@ -18,8 +20,6 @@ function TodayPokemon(){
     }
 
   },[today,dispatch]);
-
-  const pokemonRef = useRef(null);
 
   useGSAP(()=>{
 
@@ -36,7 +36,7 @@ function TodayPokemon(){
   },[pokemonRef])
 
   return (
-    <>
+    <S.Box>
       <h4>오늘의 포켓몬은?</h4>
       <div ref={pokemonRef}>
         <img src={todayPokemon.pokemon?.sprites.front_default} alt={todayPokemon.pokemon?.korean_name} />
@@ -47,7 +47,7 @@ function TodayPokemon(){
         </dt>
         <dd>오늘의 포켓몬은 오늘날짜 기준으로 나타납니다.</dd>
       </dl>
-    </>
+    </S.Box>
   )
 }
 

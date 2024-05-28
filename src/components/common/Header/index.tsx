@@ -1,20 +1,23 @@
 import { IoChevronBack } from "react-icons/io5";
-import { HeaderComponent } from "./style";
+import * as S from "./style";
+import { HeaderProps } from "./Header.stories";
 
-export interface HeaderProps {
-  prev? : boolean,
-  onClick? : React.MouseEventHandler<HTMLButtonElement>
-}
-
-function Header({prev,onClick} : HeaderProps) {
+function Header(
+  {
+    prev,
+    onClick
+  }
+  : 
+  HeaderProps
+) {
   
   return (
-    <HeaderComponent>
+    <S.HeaderComponent>
       {
         prev && <button onClick={onClick}><IoChevronBack/></button>
       }
-      <h4>HBD Pokemon</h4>
-    </HeaderComponent>
+      <h4>내 생일은 어떤 포켓몬일까?</h4>
+    </S.HeaderComponent>
   )
 
 }

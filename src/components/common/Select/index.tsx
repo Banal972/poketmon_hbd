@@ -1,14 +1,12 @@
 import { IoCaretDown } from "react-icons/io5";
-import { SelectComponent, SelectLayout, SelectStyleProps } from './style';
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { SelectComponent, SelectLayout } from './style';
+import { SelectProps } from "./Select.stories";
 
-interface SelectProps extends SelectStyleProps {
-  children : React.ReactNode;
-  register? : UseFormRegister<FieldValues>;
-  name : string;
-}
-
-export default function Select({name,register,children,backgroundColor,textColor} : SelectProps) {
+export default function Select(
+  {name,register,children,backgroundColor,textColor} 
+  : 
+  SelectProps
+) {
   return (
     <SelectLayout>
         <SelectComponent

@@ -1,25 +1,27 @@
-import { FooterComponent, LinkBtn } from "./style"
+import * as S from "./style"
 import { IoLogoGithub } from "react-icons/io5";
 import { SiTistory } from "react-icons/si";
 
 function Footer() {
   return (
-    <FooterComponent>
+    <S.FooterComponent>
       <div>
-        <LinkBtn 
+        <S.LinkBtn 
           color="#FF5A4A" 
           href="https://banal7.tistory.com/"
           target="_blank"
         >
           <SiTistory style={{width : 10, color : "#fff"}}/>
-        </LinkBtn>
-        <LinkBtn 
+        </S.LinkBtn>
+        <S.LinkBtn 
           href="https://github.com/Banal972"
           target="_blank"
-        ><IoLogoGithub/></LinkBtn>
+        >
+          <IoLogoGithub/>
+        </S.LinkBtn>
       </div>
       <p>Copyright 2024. HBDPokemon. All Right Reserved.</p>
-    </FooterComponent>
+    </S.FooterComponent>
   )
 }
 
