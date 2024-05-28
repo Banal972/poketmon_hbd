@@ -1,25 +1,60 @@
 {
-  "short_name": "HBD Pokemon",
+  "short_name": "HBD",
   "name": "내 생일은? 어떤 포켓몬일까?",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "images/icons/icon-57x57.png",
+      "type": "image/png",
+      "sizes": "57x57"
     },
     {
-      "src": "logo180.png",
+      "src": "images/icons/icon-60x60.png",
       "type": "image/png",
-      "sizes": "180x180"
+      "sizes": "60x60"
     },
     {
-      "src": "logo310.png",
+      "src": "images/icons/icon-72x72.png",
       "type": "image/png",
-      "sizes": "310x310"
+      "sizes": "72x72"
+    },
+    {
+      "src": "images/icons/icon-76x76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "images/icons/icon-114x114.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "images/icons/icon-120x120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "images/icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "images/icons/icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "images/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
