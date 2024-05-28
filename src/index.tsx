@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import "./asset/font/PokemonGSK2/stylesheet.css";
 import { GlobalStyles } from './utils/GlobalStyles';
 import 'swiper/css';
 import { Provider } from "react-redux";
 import { store } from './store/store';
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './utils/Theme';
 
 gsap.registerPlugin(useGSAP);
 
@@ -20,12 +20,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyles/>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider >
+    <ThemeProvider theme={theme}>
+      <GlobalStyles/>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider >
+    </ThemeProvider>
   </React.StrictMode>
 );
 

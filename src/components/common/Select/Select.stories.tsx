@@ -1,5 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Select from ".";
+import { SelectStyleProps } from "./style";
+import { FieldValues, UseFormRegister } from "react-hook-form";
+
+export interface SelectProps extends SelectStyleProps {
+    children : React.ReactNode;
+    register? : UseFormRegister<FieldValues>;
+    name : string;
+}
 
 const meta : Meta<typeof Select> = {
     title : "레이아웃/Select",
@@ -29,23 +37,5 @@ const meta : Meta<typeof Select> = {
 
 export default meta;
 type Story = StoryObj<typeof Select>;
-
-
-/* const SelectHooks = ()=>{
-
-    const {register} = useForm();
-
-    return (
-        <Select name="abc" register={register}>
-            <>
-                <option value="">월을 선택해주세요.</option>
-                {
-                    Array.from({length : 12},(_,index)=>12-index).map((e,i)=><option key={i} value={e}>{`${e}월`}</option>)
-                }
-            </>
-        </Select>
-    )
-
-} */
 
 export const Default : Story = {};
